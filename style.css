@@ -380,7 +380,7 @@ section {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 48em) {
     .main h2 {
         font-size: 1.2em;
     }
@@ -398,4 +398,5 @@ section {
         font-size: 1.2em;
         padding-right: 0.5rem;
     }
+
 }
