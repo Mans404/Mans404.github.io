@@ -331,7 +331,7 @@ section {
 }
 
 /* 📱 تحسين العرض على الموبايل */
-@media (max-width: 768px) {
+@media (max-width: 48em) {
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -400,3 +400,4 @@ section {
     }
 
 }
+
