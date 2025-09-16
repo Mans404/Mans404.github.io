@@ -448,31 +448,69 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section" id="contact">
-        <div class="section-header scroll-animate">
-            <h2 class="section-title">Let's Work Together</h2>
-            <p class="section-subtitle">Ready to start your next project?</p>
+<!-- Contact Section -->
+<section class="section" id="contact">
+    <div class="section-header scroll-animate">
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle">Ready to start your next project?</p>
+    </div>
+    
+    <div class="bento-grid">
+        <div class="bento-card scroll-animate">
+            <div class="card-icon">
+                <i class="fas fa-phone"></i>
+            </div>
+            <h3 class="card-title">Phone & WhatsApp</h3>
+            <p class="card-description">
+                <a href="tel:+201066789332">+201066789332</a> | 
+                <a href="https://wa.me/201066789332" target="_blank">WhatsApp</a>
+            </p>
         </div>
         
-        <div class="bento-grid">
-            <div class="bento-card scroll-animate">
-                <div class="card-icon">
-                    <i class="fas fa-phone"></i>
-                </div>
-                <h3 class="card-title">Phone & WhatsApp</h3>
-                <p class="card-description">+201066789332</p>
+        <div class="bento-card scroll-animate">
+            <div class="card-icon">
+                <i class="fas fa-envelope"></i>
             </div>
-            
-            <div class="bento-card scroll-animate">
-                <div class="card-icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <h3 class="card-title">Email</h3>
-                <p class="card-description">mhamdimansur@gmail.com</p>
-            </div>
+            <h3 class="card-title">Email</h3>
+            <p class="card-description">
+                <a href="mailto:mhamdimansur@gmail.com">mhamdimansur@gmail.com</a>
+            </p>
         </div>
-    </section>
+
+        <div class="bento-card scroll-animate">
+            <div class="card-icon">
+                <i class="fab fa-github"></i>
+            </div>
+            <h3 class="card-title">GitHub</h3>
+            <p class="card-description">
+                <a href="https://github.com/Mans404" target="_blank">github.com/Mans404</a>
+            </p>
+        </div>
+        
+        <div class="bento-card scroll-animate">
+            <div class="card-icon">
+                <i class="fab fa-linkedin"></i>
+            </div>
+            <h3 class="card-title">LinkedIn</h3>
+            <p class="card-description">
+                <a href="https://www.linkedin.com/in/mhamedmansour" target="_blank">linkedin.com/in/mhamedmansour</a>
+            </p>
+        </div>
+
+        <div class="bento-card scroll-animate">
+            <div class="card-icon">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <h3 class="card-title">Upwork</h3>
+            <p class="card-description">
+                <a href="https://www.upwork.com/freelancers/~018837bba02dea462b?mp_source=sharer" target="_blank">
+                    upwork.com/freelancers/~018837bba02dea462b
+                </a>
+            </p>
+        </div>
+    </div>
+</section>
+
 
     <script>
         // Smooth scroll animations
@@ -494,15 +532,12 @@
             observer.observe(el);
         });
 
-        // Header background on scroll
+        // Header background on scroll (always solid red)
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(15, 23, 42, 0.95)';
-            } else {
-                header.style.background = 'rgba(15, 23, 42, 0.8)';
-            }
+            header.style.background = '#ef4444'; // red
         });
+
 
         // Add stagger animation to cards
         document.querySelectorAll('.bento-grid .bento-card').forEach((card, index) => {
