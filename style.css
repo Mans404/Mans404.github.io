@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    /* Colors updated to match the portfolio site palette (only variables changed) */
-    --primary: #0ea5e9;        /* sky-500 */
-    --primary-dark: #0369a1;   /* darker sky */
-    --secondary: #2563eb;      /* blue-600 */
-    --accent: #06b6d4;         /* teal-ish accent (kept similar) */
+    --primary: #ef4444;        /* red-500 */
+    --primary-dark: #b91c1c;   /* dark red */
+    --secondary: #eab308;      /* yellow-500 */
+    --accent: #9333ea;         /* purple-600 */
     --surface: rgba(15, 23, 42, 0.04);
     --surface-hover: rgba(15, 23, 42, 0.07);
     --glass: rgba(255, 255, 255, 0.06);
-    --text-primary: #0f172a;   /* near-black / dark navy for text */
-    --text-secondary: #475569; /* slate-600 for subtitles */
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
     --text-muted: #94a3b8;
-    --gradient-1: linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%);
-    --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --gradient-1: linear-gradient(135deg, #ef4444 0%, #eab308 100%); /* red → yellow */
+    --gradient-2: linear-gradient(135deg, #9333ea 0%, #ef4444 100%); /* purple → red */
+    --gradient-3: linear-gradient(135deg, #eab308 0%, #9333ea 100%); /* yellow → purple */
     --shadow-soft: 0 4px 20px rgba(2, 6, 23, 0.06);
     --shadow-strong: 0 20px 40px rgba(2, 6, 23, 0.12);
     --border-radius: 20px;
 }
+
 
 /* --- Rest of stylesheet unchanged except it will now use the new variables --- */
 
@@ -62,12 +62,14 @@ header {
     top: 0;
     width: 100%;
     padding: 1.5rem 2rem;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(0, 76, 255, 0.06);
+    background: #ef4444; /* solid red */
+    border-bottom: 2px solid #b91c1c; /* darker red border */
     z-index: 1000;
     transition: all 0.3s ease;
 }
+
+
+
 
 .header-content {
     max-width: 1400px;
@@ -80,9 +82,7 @@ header {
 .logo {
     font-size: 1.75rem;
     font-weight: 700;
-    background: var(--gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #ffffff; /* white text */
     text-decoration: none;
     transition: all 0.3s ease;
 }
