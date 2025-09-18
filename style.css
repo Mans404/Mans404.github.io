@@ -1,23 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    --primary: #ef4444;        /* red-500 */
-    --primary-dark: #b91c1c;   /* dark red */
-    --secondary: #eab308;      /* yellow-500 */
-    --accent: #9333ea;         /* purple-600 */
-    --surface: rgba(15, 23, 42, 0.04);
-    --surface-hover: rgba(15, 23, 42, 0.07);
+    --primary: #0F172A;
+    /* Deep Navy / Soft Black */
+    --primary-dark: #111827;
+    /* Even darker navy */
+    --secondary: #64748B;
+    /* Cool Gray */
+    --accent: #34D399;
+    /* Neon Green (automation vibe) */
+    --surface: rgba(15, 23, 42, 0.75);
+    /* Glassy dark surface */
+    --surface-hover: rgba(15, 23, 42, 0.9);
     --glass: rgba(255, 255, 255, 0.06);
-    --text-primary: #0f172a;
-    --text-secondary: #475569;
-    --text-muted: #94a3b8;
-    --gradient-1: linear-gradient(135deg, #ef4444 0%, #eab308 100%); /* red → yellow */
-    --gradient-2: linear-gradient(135deg, #9333ea 0%, #ef4444 100%); /* purple → red */
-    --gradient-3: linear-gradient(135deg, #eab308 0%, #9333ea 100%); /* yellow → purple */
-    --shadow-soft: 0 4px 20px rgba(2, 6, 23, 0.06);
-    --shadow-strong: 0 20px 40px rgba(2, 6, 23, 0.12);
+    --text-primary: #F8FAFC;
+    /* Off-white for readability */
+    --text-secondary: #CBD5E1;
+    /* Light gray for subtext */
+    --text-muted: #94A3B8;
+    /* Muted slate */
+
+    --gradient-1: linear-gradient(135deg, #0F172A 0%, #34D399 100%);
+    /* dark → neon green */
+    --gradient-2: linear-gradient(135deg, #111827 0%, #34D399 100%);
+    --gradient-3: linear-gradient(135deg, #0F172A 0%, #64748B 100%);
+
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.25);
+    --shadow-strong: 0 20px 40px rgba(0, 0, 0, 0.4);
     --border-radius: 20px;
 }
+
+
+
 
 
 /* --- Rest of stylesheet unchanged except it will now use the new variables --- */
@@ -44,7 +58,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
+    background:
         radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.06) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.04) 0%, transparent 50%);
     z-index: -1;
@@ -52,8 +66,13 @@ body::before {
 }
 
 @keyframes backgroundShift {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    100% { transform: translate(-20px, -20px) rotate(2deg); }
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-20px, -20px) rotate(2deg);
+    }
 }
 
 /* Modern Header */
@@ -62,11 +81,16 @@ header {
     top: 0;
     width: 100%;
     padding: 1.5rem 2rem;
-    background: #ef4444; /* solid red */
-    border-bottom: 2px solid #b91c1c; /* darker red border */
+    background: rgba(15, 23, 42, 0.85);
+    /* dark glass */
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     z-index: 1000;
     transition: all 0.3s ease;
 }
+
+
+
 
 
 
@@ -82,7 +106,8 @@ header {
 .logo {
     font-size: 1.75rem;
     font-weight: 700;
-    color: #ffffff; /* white text */
+    color: #ffffff;
+    /* white text */
     text-decoration: none;
     transition: all 0.3s ease;
 }
@@ -93,12 +118,15 @@ header {
 
 .nav-menu {
     display: flex;
+    align-items: center;
+    /* aligns all items evenly */
     gap: 2rem;
     list-style: none;
 }
 
+
 .nav-menu a {
-    color: var(--text-secondary);
+    color: var(--text-primary);
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -433,8 +461,9 @@ header {
 }
 
 .timeline-item {
-    background: var(--glass);
-    border: 1px solid rgba(15, 23, 42, 0.04);
+    background: var(--surface-hover);
+    /* use hover color always */
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: var(--border-radius);
     padding: 2rem;
     margin-bottom: 2rem;
@@ -458,7 +487,7 @@ header {
 
 .timeline-item:hover {
     transform: translateX(10px);
-    background: var(--surface-hover);
+    /* keep same background, no color change */
 }
 
 .timeline-date {
@@ -653,6 +682,7 @@ header {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -671,26 +701,27 @@ header {
         gap: 2rem;
         text-align: center;
     }
-    
+
     .hero-content {
         text-align: center;
     }
-    
+
     .hero-image {
-        order: -1; /* Show image first on mobile */
+        order: -1;
+        /* Show image first on mobile */
     }
-    
+
     .profile-picture {
         width: 250px;
         height: 250px;
     }
-    
+
     .hero-buttons {
         justify-content: center;
         flex-direction: column;
         align-items: center;
     }
-    
+
     .social-icons {
         position: static;
         transform: none;
@@ -698,23 +729,23 @@ header {
         justify-content: center;
         margin-top: 2rem;
     }
-    
+
     .nav-menu {
         display: none;
     }
-    
+
     .projects-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .certificates-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .timeline {
         padding-left: 1rem;
     }
-    
+
     .timeline-item {
         margin-left: 1rem;
     }
