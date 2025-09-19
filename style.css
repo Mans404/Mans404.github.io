@@ -164,7 +164,7 @@ header {
     justify-content: center;
     position: relative;
     padding: 2rem;
-    background: url(images/back6.png) no-repeat center center/contain fixed, #ffffff;
+    background: url(images/back6.jpg) no-repeat center center/contain fixed, #ffffff;
     background-blend-mode: overlay;
 }
 
@@ -786,3 +786,4 @@ header {
     opacity: 1;
     transform: translateY(0);
 }
+
