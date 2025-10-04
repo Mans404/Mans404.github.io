@@ -787,3 +787,11 @@ header {
     transform: translateY(0);
 }
 
+/* === Contact Links Color Fix === */
+#contact a {
+  color: white !important;
+}
+
+#contact a:hover {
+  color: #ddd !important;
+}
