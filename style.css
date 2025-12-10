@@ -25,6 +25,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-shadow: none;
 }
 
 body {
@@ -33,6 +34,7 @@ body {
     color: var(--text-primary);
     overflow-x: hidden;
     line-height: 1.6;
+    text-shadow: none;
 }
 
 /* Animated Background - Lighter */
@@ -211,12 +213,11 @@ header {
     margin-bottom: 1rem;
     color: #ffffff;
     animation: fadeInUp 0.8s ease 0.4s both;
+    text-shadow: none;
 }
 
 .hero .gradient-text {
-    background: var(--gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #f5d896;
     display: block;
     margin-top: 0.5rem;
 }
@@ -325,9 +326,8 @@ header {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
     margin-bottom: 1rem;
-    background: var(--gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #f5d896;
+    text-shadow: none;
 }
 
 .section-subtitle {
